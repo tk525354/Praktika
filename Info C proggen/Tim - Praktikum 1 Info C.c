@@ -5,19 +5,18 @@
  	
   int waehrung, wechselwaehrung, auswahl;
   float betrag;
-  float gbp = 0.884, usd = 1.20, eur = 1.0;
+  float gbp = 0.884, usd = 1.20;
   
-  
-  gbpdoll=usd/gbp;
 
-printf("1 Euro zu US$ Kurs: %f\n",usd);
+  printf("1 Euro zu US$ Kurs: %f\n",usd);
 
-printf("1 Euro zu GBP Kurs: %f\n",gbp);
+  printf("1 Euro zu GBP Kurs: %f\n",gbp);
 
-printf("Was ist Ihre Ausgangswaehrung?\n 1.Euro\n 2.US$\n 3.GBP\n"); 
-scanf("%d",&waehrung);
+/*Ausgangswährung wählen/eingeben */
+  printf("Was ist Ihre Ausgangswaehrung?\n 1.Euro\n 2.US$\n 3.GBP\n"); 
+  scanf("%d",&waehrung);
 
-/* Beträge einlesen + welche Währung ausgewählt wurde */
+/* Beträge einlesen */
 
 switch (waehrung) {
 	
