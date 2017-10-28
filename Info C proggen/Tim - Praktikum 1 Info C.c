@@ -3,41 +3,40 @@
  main() 
  {
  	
-  int waehrung, wechselwaehrung, auswahl;
+  int waehrung, wechselwaehrung;
   float betrag;
-  float gbp = 0.884, usd = 1.20;
+  float gbp, usd;
   
 
-  printf("1 Euro zu US$ Kurs: %f\n",usd);
+  printf("Euro zu US$ Kurs?");
+  scanf("%f", &usd);
 
-  printf("1 Euro zu GBP Kurs: %f\n",gbp);
+  printf("Euro zu GBP Kurs?");
+  scanf("%f", &gbp);
 
-/*Ausgangsw‰hrung w‰hlen/eingeben */
+/*Ausgangsw√§hrung w√§hlen/eingeben */
   printf("Was ist Ihre Ausgangswaehrung?\n 1.Euro\n 2.US$\n 3.GBP\n"); 
   scanf("%d",&waehrung);
 
-/* Betr‰ge einlesen */
+/* Betr√§ge einlesen */
 
 switch (waehrung) {
 	
 	case 1: 
 	        printf("Welchen Euro-Betrag wollen Sie wechseln?\n");
-            scanf("%f",&betrag);
-            auswahl = 1;
+                scanf("%f",&betrag);          
 	break;	    
 	
 	
 	case 2: 
 	        printf("Welchen US$-Betrag wollen Sie wechseln?\n");
-	        scanf("%f",&betrag);
-	        auswahl = 2;			
+	        scanf("%f",&betrag);       			
 	break;
 	
 	
 	case 3: 
 	        printf("Welchen GBP-Betrag wollen Sie wechseln?\n");
-	        scanf("%f",&betrag);
-	        auswahl = 3;				
+	        scanf("%f",&betrag);       				
 	break;
 	
 	
@@ -53,15 +52,15 @@ switch (wechselwaehrung) {
 	
 	/*Ausgabe in Euro*/
     case 1: 
-	        if(auswahl == 1){ /*Eingabe in EUR*/
+	        if(waehrung == 1){ /*Eingabe in EUR*/
 	          printf("Sie erhalten dafuer %f\n", betrag);
 	   }
     
-	        else if(auswahl == 2){ /*Eingabe in Dollar*/
+	        else if(waehrung == 2){ /*Eingabe in Dollar*/
 	          printf("Sie erhalten dafuer %f\n", betrag / usd);
 	   }
       
-            else if(auswahl == 3) {/*Eingabe in GBP*/
+            else if(waehrung == 3) {/*Eingabe in GBP*/
 	          printf("Sie erhalten dafuer %f\n", betrag / gbp);
 	   }
 	break;
@@ -69,15 +68,15 @@ switch (wechselwaehrung) {
 	
 	/*Ausgabe in Dollar*/
 	case 2: 
-	        if(auswahl == 1){ /*Eingabe in EUR*/
+	        if(waehrung == 1){ /*Eingabe in EUR*/
 	          printf("Sie erhalten dafuer %f\n", betrag * usd);
 	   }
       
-	        else if(auswahl == 2){ /*Eingabe in Dollar*/
+	        else if(waehrung == 2){ /*Eingabe in Dollar*/
 	          printf("Sie erhalten dafuer %f\n", betrag);
 	   }
     
-	        else if(auswahl == 3){ /*Eingabe in GBP*/
+	        else if(waehrung == 3){ /*Eingabe in GBP*/
 	          printf("Sie erhalten dafuer %f\n",betrag*(usd/gbp));
 	   }
 	break;
@@ -85,15 +84,15 @@ switch (wechselwaehrung) {
 
  	/*Ausgabe in GBP*/
 	case 3: 
-	        if(auswahl == 1){ /*Eingabe in EUR*/
+	        if(waehrung == 1){ /*Eingabe in EUR*/
 	          printf("Sie erhalten dafuer %f\n", betrag*gbp);
 	   }
 
-	        else if(auswahl == 2){ /*Eingabe in Dollar*/
+	        else if(waehrung == 2){ /*Eingabe in Dollar*/
 	          printf("Sie erhalten dafuer %f\n", (betrag / usd)*gbp);
 	   }
    
-            else if(auswahl == 3){ /*Eingabe in GBP*/
+            else if(waehrung == 3){ /*Eingabe in GBP*/
 	          printf("Sie erhalten dafuer %f\n", betrag);
        }
 	break;
@@ -103,4 +102,5 @@ switch (wechselwaehrung) {
     
 } 
 
+return 0;
 }
